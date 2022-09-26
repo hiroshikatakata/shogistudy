@@ -15,4 +15,8 @@ Rails.application.routes.draw do
     get 'logout', to: 'users/sessions#destroy'
     post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
   end
+
+  resources :boards do
+    resources :responses
+  end
 end
