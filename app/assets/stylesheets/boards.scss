@@ -1,3 +1,142 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+a{
+  text-decoration: none;
+}
+td{
+  text-align: center;
+}
+th{
+  border-spacing: 10px;
+}
+.td_title{
+  text-align: left;
+}
+.header_log_button{
+  font-family: 'Noto Serif JP', serif !important;
+  font-size: 18px;
+  font-weight: 700;
+  color: forestgreen;
+  position: relative;
+  left: 1125px;
+  top: 17px;
+}
+.header_log_button:active{
+  color: seagreen;
+}
+.main_visual{
+  background-image:image-url("adpDSC_6819.jpg");
+  background-size: cover;
+  height: 500px;
+}
+.site_logo {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: 2rem .5rem;
+  border: #0c0c0c 1px solid;
+  box-shadow:#0c0c0c 3px 5px 0;
+  margin:5% auto;
+  font-family: 'Noto Serif JP', serif !important;
+  background-color: aliceblue;
+  position: relative;
+  left: 550px;
+}
+.site_top_list{
+  font-family: 'Noto Serif JP', serif !important;
+  background-color: aliceblue;
+  writing-mode: vertical-rl;
+  position: relative;
+  top: -290px;
+}
+.main_board{
+  position: relative;
+  top: -220px;
+  margin-left: 100px;
+}
+.main_board_title{
+  font-family: 'Noto Serif JP', serif !important;
+  font-size: 30px;
+  position: relative;
+  top: 250px;
+}
+.board_list{
+  font-size: 20px;
+  position: relative;
+  top: 250px;
+}
+.page_container{
+  margin-bottom: 100px;
+}
+.new_board_table{
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+.new-img{
+  width: 200px;
+  object-fit: cover;
+  position: relative;
+  left: 330px;
+  top: -120px;
+}
+.board_form_image_name{
+  position: relative;
+  left: -162px;
+}
+.board_form_image_name_info{
+  position: relative;
+  top: 605px;
+  left: 600px;
+  color: maroon;
+}
+.new_board_createbotton{
+  position: relative;
+  left: 220px;
+  top: 160px;
+  background-color: #007700;
+  height: 40px;
+  width: 150px;
+  font-family: 'Noto Serif JP', serif !important;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 100px;
+}
+.board_thead{
+  font-family: 'Noto Serif JP', serif !important;
+  color: seagreen;
+  font-size: 35px;
+  position: relative;
+  top: -35px;
+  left: 220px;
+}
+.board_form_title{
+  height: 50px;
+  width: 900px;
+}
+.board_form_body{
+  height: 400px;
+  width: 900px;
+}
+.board_title{
+  background-color: #d8e698;
+  font-family: 'Noto Serif JP', serif !important;
+  padding-left: 20px;
+}
+.outer_board_body{
+  height: 500px;
+  width: 900px;
+}
+.board_image_name{
+  margin-top: 30px;
+  padding-left: 20px;
+  height: 250px;
+  width: 250px;
+}
+.new_board_response_page_container{
+  margin-bottom: 100px;
+}
+.show_page_container{
+  margin: 20px;
+}
