@@ -5,9 +5,12 @@
     <h2 class="board_title"><%= @board.title %></h2>
     <div class="outer_board_body">
       <div class="board_body"><%= safe_join( @board.body.split("\n"),tag(:br)) %></div>
-      <% if @board.image_name? %>
-        <%= image_tag @board.image_name.url, class: "board_image_name" %>
-      <% end %>
+      <div class="board_image_name_box">
+        <% @board.image_name.each_with_index do |image, index| %>
+          <%= image_tag image.to_s, class: "board_image_name" %>
+          <div class="board_image_number">[図<%= index +1 %>]</div>
+        <% end %>
+      </div>
     </div>
   </div>
   <div>
