@@ -11,25 +11,25 @@
           <div class="board_image_number">[図<%= index +1 %>]</div>
         <% end %>
       </div>
-    </div>
-  </div>
-  <div>
-    <% @responses.each_with_index do |response, index| %>
-      <div><%= index+1 %>.<%= l response.created_at %></div>
-      <div><%= safe_join( response.body.split("\n"),tag(:br)) %></div>
-      <% if response.image_name? %>
-        <%= image_tag response.image_name.url, class: "board_image_name" %>
+      <div class="responses_board">
+        <% @responses.each_with_index do |response, index| %>
+          <div><%= index+1 %>.<%= l response.created_at %></div>
+          <div><%= safe_join( response.body.split("\n"),tag(:br)) %></div>
+          <% if response.image_name? %>
+            <%= image_tag response.image_name.url, class: "board_image_name" %>
+          <% end %>
+        <% end %>
+      </div>
+      <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 返信する</a>
+      </div>
+      <div id="open" style="display:none;clear:both;">
+        <div>
+          <div><%= form.text_area :body, class: "board_form_body"%></div>
+          <div><%= form.file_field :image_name %></div>
+          <%= form.submit "返信する" %>
+        </div>
       <% end %>
-    <% end %>
-  </div>
-  <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
-    <a style="cursor:pointer;">▼ 返信する</a>
-  </div>
-  <div id="open" style="display:none;clear:both;">
-    <div>
-      <div><%= form.text_area :body, class: "board_form_body"%></div>
-      <div><%= form.file_field :image_name %></div>
-      <%= form.submit "返信する" %>
     </div>
-  <% end %>
+  </div>
 </div>

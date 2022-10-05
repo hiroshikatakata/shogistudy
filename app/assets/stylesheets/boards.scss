@@ -125,7 +125,6 @@ th{
   padding-left: 20px;
 }
 .outer_board_body{
-  height: 500px;
   width: 900px;
 }
 #preview_box{
@@ -146,14 +145,13 @@ th{
 }
 .board_image_name{
   margin-top: 30px;
-  padding-left: 20px;
-  height: 220px;
-  width: 25%;
+  height: 160px;
+  width: 20%;
 }
 .board_image_number{
   position: relative;
-  top: 250px;
-  left: -140px;
+  top: 210px;
+  left: -110px;
   white-space: nowrap;
 }
 .new_board_response_page_container{
@@ -161,6 +159,12 @@ th{
   width: 1400px;
   margin-right:auto;
   margin-left:auto;
+}
+.responses_board{
+  margin-top: 200px;
+}
+.response_box{
+  margin-top: 100px;
 }
 .show_page_container{
   margin: 20px;
