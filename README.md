@@ -1,4 +1,3 @@
-<pre>
 ## アプリケーション名
 ### 「shogistudy」
 ## アプリケーション概要
@@ -9,7 +8,7 @@
 ## 機能一覧
 ### ・ユーザー登録、ログイン機能(devise)
 ### ・投稿機能
-###   ◦ 画像投稿(carrierwave)
+###   <pre>◦ 画像投稿(carrierwave)</pre>
 ## テスト
 ### ・Rspec
 ###   ◦ 統合テスト(system、request)
