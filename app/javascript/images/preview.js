@@ -13,8 +13,15 @@ window.addEventListener('DOMContentLoaded', function() {
   };
   var setnum = 1;
   document.getElementById('board_image_name').addEventListener('change', (e) =>{
+    const imageContent = document.querySelectorAll('.preview_inner_box');
+    if (imageContent){
+      imageContent.forEach(elm => {
+        console.log(elm)
+        elm.remove();
+        setnum--;
+      });
+    }
     for (let i = 0; i < e.target.files.length; i++) {
-      console.log(e.target.files[i]);
       const file = e.target.files[i];
       const blob = window.URL.createObjectURL(file);
       createImageHTML(blob);
