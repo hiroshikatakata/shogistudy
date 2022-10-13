@@ -10,6 +10,10 @@ td{
 th{
   border-spacing: 10px;
 }
+.top_link{
+  position: relative;
+  top: 30px;
+}
 .td_title{
   text-align: left;
 }
@@ -126,6 +130,9 @@ th{
 }
 .outer_board_body{
   width: 900px;
+}
+.board_outer{
+  margin-left: 20px;
 }
 #preview_box{
   display: flex;
