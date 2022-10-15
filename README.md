@@ -5,6 +5,7 @@
 ## 使用技術
 #### Ruby on rails, ruby, HTML, CSS, JavaScript
 ## デモ画像
+<img width="1221" alt="スクリーンショット 2022-10-15 15 19 38" src="https://user-images.githubusercontent.com/93134765/195972434-3e3efbab-1072-46a8-8f39-227f14aa79aa.png">
 ## ER図
 ![erd](https://user-images.githubusercontent.com/93134765/194715475-0c3ff38a-1870-4a3c-9e76-58ceeffa258b.png)
 ## 機能一覧
