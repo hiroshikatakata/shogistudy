@@ -1,0 +1,30 @@
+<div class="page_container">
+  <%= form_with model: @board, local: true do |form| %>
+  <%= render 'layouts/error_messages', model: form.object %>
+  <table class="new_board_table">
+    <thead>
+      <tr>
+        <th class="board_thead">新規議題作成</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= form.label :title,"議題名" %></td>
+        <td><%= form.text_field :title, class: "board_form_title"%></td>
+      </tr>
+      <tr>
+        <td><%= form.label :body,"議題内容" %></td>
+        <td><%= form.text_area :body, class: "board_form_body"%></td>
+      </tr>
+      <tr>
+        <td><%= form.label :image_name, "画像" %></td>
+        <td class=board_form_image_name><%= form.file_field :image_name, :multiple => true, class: "board_form_image_name" %></td>
+        <i class="board_form_image_name_info">*画像は本文の一番下に表示されます(複数枚投稿可)</i>
+      </tr>
+    </tbody>
+  </table>
+  <div id="preview_box"></div>
+  <div class="outer_new_board_createbotton"><%= form.submit "投稿する", class: "new_board_createbotton" %></div>
+  <% end %>
+</div>
+<%= javascript_pack_tag 'images/application' %>

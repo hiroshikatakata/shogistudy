@@ -1,0 +1,11 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
+  activerecord:
+    attributes:
+      board:
+        title: 議題名
+        body: 議題内容
+      response:
+        body: 返信内容

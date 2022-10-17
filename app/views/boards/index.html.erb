@@ -1,0 +1,18 @@
+<div class="page_container">
+  <div class="main_visual">
+    <%= insert_login_logout_function %>
+    <h1 class="site_logo">将棋研究会<h1>
+    <%= render 'shared/site_top_list_function' %>
+  </div>
+  <div class="main_introduction">
+    <div>将棋の研究に行き詰まっていませんか？</div>
+    <div>そんな時は誰かに相談したり、誰かの相談に乗ることで視野を広げてみるといいかもしれません</div>
+    <div>一緒に楽しく棋力向上を目指しましょう!</div>
+  </diV>
+  <div class="main_board">
+    <h2 class="main_board_title">議題一覧</h2>
+    <% @boards.each do |board| %>
+      <li class="board_list"><%= link_to "#{board.title}", new_board_response_path(board.id) %></li>
+    <% end %>
+  </div>
+</div>
