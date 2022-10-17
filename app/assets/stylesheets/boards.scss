@@ -34,6 +34,14 @@ th{
   background-size: cover;
   height: 500px;
 }
+.main_introduction{
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-family: 'Noto Serif JP', serif !important;
+  color: #000066;
+  font-size: 18px;
+}
 .site_logo {
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
@@ -56,7 +64,7 @@ th{
 }
 .main_board{
   position: relative;
-  top: -220px;
+  top: -200px;
   margin-left: 100px;
 }
 .main_board_title{
@@ -169,6 +177,9 @@ th{
 }
 .responses_board{
   margin-top: 200px;
+}
+.responses_board_count{
+  margin-top: 15px;
 }
 .response_box{
   margin-top: 100px;
