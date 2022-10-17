@@ -2,7 +2,7 @@
 
 class Board < ApplicationRecord
   belongs_to :user
-  has_many :responses
+  has_many :responses, dependent: :destroy
   mount_uploaders :image_name, ImageNameUploader
   validates :title, presence: true, length: { maximum: 50 }
   validates :body, presence: true, length: { maximum: 500 }
