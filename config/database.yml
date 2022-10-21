@@ -54,3 +54,4 @@ production:
   database: shogistudy_app_production
   username: shogistudy_app
   password: <%= ENV['SHOGISTUDY_APP_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
