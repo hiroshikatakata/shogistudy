@@ -6,7 +6,8 @@
 #### Ruby on rails, ruby, HTML, CSS, JavaScript
 ## デモ画像
 <img src="https://user-images.githubusercontent.com/93134765/196187603-ef568111-1702-4667-9fe7-ec5ff859076f.jpg" width="800px">
-
+<img src="" width="800px">
+<img src="" width="800px">
 ## なぜ作ったのか
 #### 将棋には対戦するだけではなく、新しい戦型や実際の局面を検討・研究する楽しみもありますので、
 #### 短に将棋の話ができる相手がいなくても、オンラインで気軽に相談出来るような環境を作りたいという思いで作成しました。
