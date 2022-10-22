@@ -6,7 +6,7 @@
 #### Ruby on rails, ruby, HTML, CSS, JavaScript
 ## デモ画像
 <img src="https://user-images.githubusercontent.com/93134765/196187603-ef568111-1702-4667-9fe7-ec5ff859076f.jpg" width="800px">
-<img src="" width="800px">
+<img src="https://user-images.githubusercontent.com/93134765/197352016-c354d30a-5039-480c-a751-35d0c08814dc.jpg" width="800px">
 <img src="" width="800px">
 ## なぜ作ったのか
 #### 将棋には対戦するだけではなく、新しい戦型や実際の局面を検討・研究する楽しみもありますので、
