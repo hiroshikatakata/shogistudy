@@ -7,8 +7,10 @@
 ## デモ画像
 #### Top page
 <img src="https://user-images.githubusercontent.com/93134765/196187603-ef568111-1702-4667-9fe7-ec5ff859076f.jpg" width="800px">
+
 #### 新規議題作成
 <img src="https://user-images.githubusercontent.com/93134765/197352016-c354d30a-5039-480c-a751-35d0c08814dc.jpg" width="800px">
+
 #### コメント機能
 <img src="https://user-images.githubusercontent.com/93134765/197352137-c3770041-300d-41aa-b73b-8d7c5bb1ddb5.jpg" width="800px">
 
