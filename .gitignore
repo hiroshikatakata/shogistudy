@@ -13,7 +13,6 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
 !/log/.keep
 !/tmp/.keep
 
@@ -36,5 +35,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-tmp/
 node_modules
+tmp/cache/
+tmp/development_secret.txt
+tmp/miniprofiler/
+tmp/restart.txt
+tmp/storage/
