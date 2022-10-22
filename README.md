@@ -20,5 +20,6 @@
 #### 将棋ということで和風なデザインを意識しました。  
 #### 議題を投稿する際に、画像が一枚しか保存できないと意図がわかりづらいことが懸念されたので、  
 #### 画像を複数枚保存可能+プレビュー機能で画像の並び順などが適切か把握できるようにしました。
+https://user-images.githubusercontent.com/93134765/197350374-c0f7de18-7bc7-4fcf-9684-6af78f5ea5df.mp4
 ## ER図
 ![erd](https://user-images.githubusercontent.com/93134765/194715475-0c3ff38a-1870-4a3c-9e76-58ceeffa258b.png)
