@@ -78,3 +78,5 @@ gem 'carrierwave'
 gem 'rails-i18n'
 
 gem 'pry-rails'
+
+gem "sd_notify"
