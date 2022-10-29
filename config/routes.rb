@@ -19,5 +19,8 @@ Rails.application.routes.draw do
 
   resources :boards do
     resources :responses
+    collection do
+      get 'search'
+    end
   end
 end

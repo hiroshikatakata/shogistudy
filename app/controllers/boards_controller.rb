@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class BoardsController < ApplicationController
+  before_action :set_q, only: [:index, :search]
+
   def index
     @boards = Board.all
   end
@@ -31,9 +33,17 @@ class BoardsController < ApplicationController
     redirect_to '/boards/'
   end
 
+  def search
+    @results = @q.result
+  end
+
   private
 
   def board_params
     params.require(:board).permit(:title, :body, { image_name: [] })
+  end
+
+  def set_q
+    @q = Board.ransack(params[:q])
   end
 end
