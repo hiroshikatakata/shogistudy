@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :responses
     collection do
       get 'search'
+      get 'allboard'
     end
   end
 end

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BoardsController < ApplicationController
-  before_action :set_q, only: [:index, :search]
+  before_action :set_q
 
   def index
     @boards = Board.all
@@ -10,6 +10,15 @@ class BoardsController < ApplicationController
   def show
     @user = current_user
     @boards = @user.boards
+  end
+
+  def allboard
+    if sort_params.present?
+      @boards = Board.sort_boards(sort_params)
+    else
+      @boards = Board.all
+    end
+    @sort_list = Board.sort_list
   end
 
   def new
@@ -39,11 +48,15 @@ class BoardsController < ApplicationController
 
   private
 
-  def board_params
-    params.require(:board).permit(:title, :body, { image_name: [] })
-  end
+    def board_params
+      params.require(:board).permit(:title, :body, { image_name: [] })
+    end
 
-  def set_q
-    @q = Board.ransack(params[:q])
-  end
+    def set_q
+      @q = Board.ransack(params[:q])
+    end
+
+    def sort_params
+      params.permit(:sort)
+    end
 end
