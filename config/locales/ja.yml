@@ -9,3 +9,10 @@ ja:
         body: 議題内容
       response:
         body: 返信内容
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."

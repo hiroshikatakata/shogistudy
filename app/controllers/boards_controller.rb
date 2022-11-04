@@ -14,9 +14,9 @@ class BoardsController < ApplicationController
 
   def allboard
     if sort_params.present?
-      @boards = Board.sort_boards(sort_params)
+      @boards = Board.sort_boards(sort_params).page(params[:page]).per(3)
     else
-      @boards = Board.all
+      @boards = Board.all.page(params[:page]).per(3)
     end
     @sort_list = Board.sort_list
   end
