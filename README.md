@@ -6,7 +6,7 @@
 #### Ruby on rails, ruby, HTML, CSS, JavaScript
 ## デモ画像
 #### Top page
-<img src="https://user-images.githubusercontent.com/93134765/196187603-ef568111-1702-4667-9fe7-ec5ff859076f.jpg" width="800px">
+<img src="https://user-images.githubusercontent.com/93134765/201404725-67fd02ad-30e3-4386-b0ed-12b1f59605de.jpg" width="800px">
 
 #### 新規議題作成
 <img src="https://user-images.githubusercontent.com/93134765/197352016-c354d30a-5039-480c-a751-35d0c08814dc.jpg" width="800px">
