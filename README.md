@@ -12,7 +12,7 @@
 <img src="https://user-images.githubusercontent.com/93134765/197352016-c354d30a-5039-480c-a751-35d0c08814dc.jpg" width="800px">
 
 #### コメント機能
-<img src="https://user-images.githubusercontent.com/93134765/197352137-c3770041-300d-41aa-b73b-8d7c5bb1ddb5.jpg" width="800px">
+<img src="https://user-images.githubusercontent.com/93134765/201404159-53ab5ffe-d969-49f8-9ff3-7bba010d9c2a.jpg" width="800px">
 
 ## なぜ作ったのか
 #### 将棋には対戦するだけではなく、新しい戦型や実際の局面を検討・研究する楽しみもありますので、
