@@ -14,13 +14,13 @@
       <div class="responses_board">
         <% @responses.each_with_index do |response, index| %>
           <div class="responses_board_count"><%= index+1 %>.<%= l response.created_at %></div>
-          <div><%= safe_join( response.body.split("\n"),tag(:br)) %></div>
+          <div class="responses_board_body"><%= safe_join( response.body.split("\n"),tag(:br)) %></div>
           <% if response.image_name? %>
             <%= image_tag response.image_name.url, class: "board_image_name" %>
           <% end %>
         <% end %>
       </div>
-      <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+      <div class="responses_board_point" onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
         <a style="cursor:pointer;">▼ 返信する</a>
       </div>
       <div id="open" style="display:none;clear:both;">

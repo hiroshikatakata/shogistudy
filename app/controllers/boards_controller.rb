@@ -1,13 +1,24 @@
 # frozen_string_literal: true
 
 class BoardsController < ApplicationController
+
   def index
-    @boards = Board.all
+    sort_params = "created_at_desc"
+    @boards = Board.order("created_at DESC").limit(5)
   end
 
   def show
     @user = current_user
-    @boards = @user.boards
+    @boards = @user.boards.page(params[:page]).per(10)
+  end
+
+  def allboard
+    if sort_params.present?
+      @boards = Board.sort_boards(sort_params).page(params[:page]).per(10)
+    else
+      @boards = Board.all.page(params[:page]).per(10)
+    end
+    @sort_list = Board.sort_list
   end
 
   def new
@@ -33,7 +44,11 @@ class BoardsController < ApplicationController
 
   private
 
-  def board_params
-    params.require(:board).permit(:title, :body, { image_name: [] })
-  end
+    def board_params
+      params.require(:board).permit(:title, :body, { image_name: [] })
+    end
+
+    def sort_params
+      params.permit(:sort)
+    end
 end

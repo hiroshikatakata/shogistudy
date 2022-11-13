@@ -1,0 +1,14 @@
+<div class="page_container">
+  <div class="main_board_container">
+    <div class="main_board_image"></div>
+    <div class="main_board">
+      <h2 class="main_board_title">検索結果</h2>
+      <div class="main_board_content">
+      <% @search_boards.each do |board| %>
+        <li class="board_list"><%= link_to "#{board.title}", new_board_response_path(board.id) %></li>
+      <% end %>
+      </div>
+    </div>
+    <%= paginate @search_boards %>
+  </div>
+</div>

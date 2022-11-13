@@ -1,6 +1,6 @@
 <div class="show_page_container">
   <h1 class="board_thead">作成議題一覧</h1>
-  <table cellspacing="10">
+  <table class="myboard_table">
     <thead>
       <tr>
         <th>タイトル</th>
@@ -15,9 +15,10 @@
           <td><%= l board.created_at %></td>
           <td><%= board.responses.count %>件</td>
           <td><%= link_to "返信を確認", new_board_response_path(board.id) %></td>
-          <td><%= button_to "議題を取り下げる", board, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+          <td><%= button_to "議題削除", board, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <div class="myboard_paginate"><%= paginate @boards %></div>
 </div>

@@ -1,8 +1,3 @@
-<div class="header_nav">
-  <div class="header_log"><%= link_to  new_user_session_path do %>
-    <div class="header_log_button">ログイン</div><!-- 新規登録画面に移行する -->
-  <% end %></div>
-  <div class="header_log"><%= link_to  new_user_registration_path do %>
-     <div class="header_log_button">登録する</div><!-- 新規登録画面に移行する -->
-  <% end %></div>
-</div>
+<li class="dropdown__list"><%= link_to "ログイン", new_user_session_path %></li>
+<li class="dropdown__list"><%= link_to "登録する", new_user_registration_path %></li>
+<li class="dropdown__list"><%= link_to 'ゲストログイン(閲覧用)', users_guest_sign_in_path, method: :post %></li>

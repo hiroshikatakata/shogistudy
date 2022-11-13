@@ -1,0 +1,6 @@
+<div class="main_board">
+  <h2 class="main_board_title">新着議題</h2>
+  <% @boards.each do |board| %>
+    <li class="board_list"><%= link_to "#{board.title}", new_board_response_path(board.id) %></li>
+  <% end %>
+</div>
