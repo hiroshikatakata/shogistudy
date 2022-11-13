@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
   <ul class="site_top_list">
     <li>
-      <%= link_to '新規議題作成', new_board_path %>
+      <%= link_to '新規議題作成', new_board_path, class: "site_top_list_content" %>
     </li>
     <li>
-      <%= link_to '作成した議題を確認', board_path(1)%>
+      <%= link_to '作成した議題を確認', board_path(1), class: "site_top_list_content" %>
     </li>
   </ul>
 <% end %>

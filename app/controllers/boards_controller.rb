@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
 class BoardsController < ApplicationController
-  before_action :set_q
 
   def index
-    @boards = Board.all
+    sort_params = "created_at_desc"
+    @boards = Board.order("created_at DESC").limit(5)
   end
 
   def show
     @user = current_user
-    @boards = @user.boards
+    @boards = @user.boards.page(params[:page]).per(10)
   end
 
   def allboard
     if sort_params.present?
-      @boards = Board.sort_boards(sort_params).page(params[:page]).per(3)
+      @boards = Board.sort_boards(sort_params).page(params[:page]).per(10)
     else
-      @boards = Board.all.page(params[:page]).per(3)
+      @boards = Board.all.page(params[:page]).per(10)
     end
     @sort_list = Board.sort_list
   end
@@ -42,18 +42,10 @@ class BoardsController < ApplicationController
     redirect_to '/boards/'
   end
 
-  def search
-    @results = @q.result
-  end
-
   private
 
     def board_params
       params.require(:board).permit(:title, :body, { image_name: [] })
-    end
-
-    def set_q
-      @q = Board.ransack(params[:q])
     end
 
     def sort_params
