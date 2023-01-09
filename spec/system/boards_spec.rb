@@ -34,11 +34,10 @@ RSpec.describe 'boards', type: :system do
         expect(current_path).to eq new_board_response_path(@boards[0].id)
       end
 
-      it 'ログアウト出来るか確認' do
-        click_button('ログアウト')
-        expect(page).to have_no_link 'ログアウト'
-        expect(page).to have_link 'ログイン', href: new_user_session_path
-        expect(page).to have_link '登録する', href: new_user_registration_path
+      it 'ログアウト出来るか確認', js: true do
+        find('.nav_list_dropdown').hover
+        find('.logout_button').click
+        expect(page).not_to have_link '新規議題作成', href: new_board_path
       end
     end
 
@@ -56,22 +55,22 @@ RSpec.describe 'boards', type: :system do
         end
       end
 
-      it '新規議題作成がリンクではなくテキストであることを確認' do
+      it '新規議題作成がないことを確認' do
         expect(page).not_to have_link '新規議題作成'
-        expect(page).to have_content '新規議題作成'
       end
 
-      it '作成した議題を確認がリンクではなくテキストであることを確認' do
+      it '作成した議題を確認がないことを確認' do
         expect(page).not_to have_link '作成した議題を確認'
-        expect(page).to have_content '作成した議題を確認'
       end
 
       it 'ログインリンクのリンク先がnew_user_session_pathになっているか確認' do
+        find('.nav_list_dropdown').hover
         click_link('ログイン')
         expect(current_path).to eq '/users/sign_in'
       end
 
       it 'ログインリンクのリンク先がnew_user_session_pathになっているか確認' do
+        find('.nav_list_dropdown').hover
         click_link('登録する')
         expect(current_path).to eq '/users/sign_up'
       end
